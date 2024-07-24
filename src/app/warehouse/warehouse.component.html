@@ -1,0 +1,36 @@
+<!-- <div [formGroup]="warehouseForm">
+    <label>Количество стеллажей:</label>
+    <input type="number" formControlName="shelves">
+    <label>Количество полок на стеллаже:</label>
+    <input type="number" formControlName="rows">
+    <label>Количество ячеек на полке:</label>
+    <input type="number" formControlName="columns">
+</div>
+<button (click)="generateShelves()">Рассчитать</button>
+  
+<div *ngFor="let shelf of shelfData; let i = index">  
+  <app-shelf [shelf]="shelf" [shelfIndex]="i"></app-shelf>
+</div> -->
+
+<div class="container">
+  <div class="sidenav">
+    <form [formGroup]="warehouseForm" class="form-container">
+      <label for="shelves">Количество стеллажей:</label>
+      <input id="shelves" type="number" formControlName="shelves">
+
+      <label for="rows">Количество полок на стеллаже:</label>
+      <input id="rows" type="number" formControlName="rows">
+
+      <label for="columns">Количество ячеек на полке:</label>
+      <input id="columns" type="number" formControlName="columns">
+
+      <button type="button" (click)="generateShelves()">Рассчитать</button>
+    </form>
+  </div>
+
+  <div class="content">
+    <div *ngFor="let shelf of shelfData; let i = index">
+      <app-shelf [shelf]="shelf" [shelfIndex]="i"></app-shelf>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<!-- <div>
+    <h3>Стеллаж {{ shelfIndex + 1 }}</h3>
+    <div *ngFor="let row of shelf; let rowIndex = index">
+      <div *ngFor="let cell of row; let cellIndex = index"
+           (mouseover)="onMouseOver(cell)"
+           (mouseout)="onMouseOut()"
+           class="cell">
+        Ячейка {{ rowIndex + 1 }}-{{ cellIndex + 1 }}
+        <div *ngIf="hoveredCell === cell" class="tooltip">
+          {{ cell.name }}
+        </div>
+      </div>
+    </div>
+</div>
+   -->
+   <div>
+    <h3>Стеллаж {{ shelfIndex + 1 }}</h3>
+    <div *ngFor="let row of shelf; let rowIndex = index" class="row">
+      <div *ngFor="let cell of row; let cellIndex = index"
+           (mouseover)="onMouseOver(cell)"
+           (mouseout)="onMouseOut()"
+           class="cell">
+        Ячейка {{ rowIndex + 1 }}-{{ cellIndex + 1 }}
+        <div *ngIf="hoveredCell === cell" class="tooltip">
+          {{ cell.name }}
+        </div>
+      </div>
+    </div>
+</div>
